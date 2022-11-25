@@ -1,5 +1,6 @@
-import 'package:bmi/views/home_view.dart';
 import 'package:flutter/material.dart';
+
+import '../views/home_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

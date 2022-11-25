@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bmi/utils/app_colors.dart';
+import 'app_colors.dart';
 
 class AppTextStyle {
   static const TextStyle greyTextStyle = TextStyle(
@@ -24,5 +24,10 @@ class AppTextStyle {
     fontSize: 26,
     fontWeight: FontWeight.w700,
     height: 0.3,
+  );
+
+  static const TextStyle resultTextStyle = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
   );
 }

@@ -1,13 +1,17 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
-import 'package:bmi/components/calculate_butoon.dart';
-import 'package:bmi/components/heigth.dart';
-import 'package:bmi/components/male_female.dart';
-import 'package:bmi/components/status_card.dart';
-import 'package:bmi/components/weigth_age.dart';
-import 'package:bmi/utils/app_colors.dart';
-import 'package:bmi/utils/app_text.dart';
-import 'package:bmi/utils/text_styles.dart';
+import '../components/calculate_butoon.dart';
+import '../components/heigth.dart';
+import '../components/male_female.dart';
+import '../components/status_card.dart';
+import '../components/weigth_age.dart';
+
+import '../utils/app_colors.dart';
+import '../utils/app_text.dart';
+import '../utils/result_alert.dart';
+import '../utils/text_styles.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -31,7 +35,7 @@ class _HomeViewState extends State<HomeView> {
         title: const Text(AppText.appBarTitle, style: AppTextStyle.titleStyle),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
             Expanded(
@@ -51,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  const SizedBox(width: 20),
                   StatusCard(
                     child: InkWell(
                       onTap: () {
@@ -69,7 +73,7 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 20),
             StatusCard(
               child: Heith(
                 height: heigth,
@@ -80,7 +84,7 @@ class _HomeViewState extends State<HomeView> {
                 },
               ),
             ),
-            const SizedBox(height: 5),
+            const SizedBox(height: 20),
             Expanded(
               child: Row(
                 children: [
@@ -100,7 +104,7 @@ class _HomeViewState extends State<HomeView> {
                       },
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  const SizedBox(width: 20),
                   StatusCard(
                     child: WeigthAge(
                       text: AppText.age,
@@ -123,7 +127,20 @@ class _HomeViewState extends State<HomeView> {
           ],
         ),
       ),
-      bottomNavigationBar: const CalculateButton(),
+      bottomNavigationBar: CalculateButton(
+        onTap: () {
+          final res = weigth / math.pow(heigth / 100, 2);
+          if (res <= 18.4) {
+            showMyDialog(context, AppText.thin);
+          } else if (res >= 18.5 && res <= 24.9) {
+            showMyDialog(context, AppText.normal);
+          } else if (res >= 25) {
+            showMyDialog(context, AppText.fat);
+          } else {
+            showMyDialog(context, AppText.sorry);
+          }
+        },
+      ),
     );
   }
 }

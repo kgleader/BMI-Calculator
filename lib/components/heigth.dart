@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:bmi/utils/app_colors.dart';
-import 'package:bmi/utils/app_text.dart';
-import 'package:bmi/utils/text_styles.dart';
+import '../utils/app_colors.dart';
+import '../utils/app_text.dart';
+import '../utils/text_styles.dart';
 
 class Heith extends StatelessWidget {
   const Heith({

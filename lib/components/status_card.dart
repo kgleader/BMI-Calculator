@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bmi/utils/app_colors.dart';
+import '../utils/app_colors.dart';
 
 class StatusCard extends StatelessWidget {
   const StatusCard({Key? key, required this.child}) : super(key: key);

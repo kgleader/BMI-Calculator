@@ -1,19 +1,18 @@
-import 'dart:developer';
-
-import 'package:bmi/utils/app_colors.dart';
-import 'package:bmi/utils/app_text.dart';
 import 'package:bmi/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/app_colors.dart';
+import '../utils/app_text.dart';
+
 class CalculateButton extends StatelessWidget {
-  const CalculateButton({Key? key}) : super(key: key);
+  const CalculateButton({Key? key, required this.onTap}) : super(key: key);
+
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        log('basyldy');
-      },
+      onTap: onTap,
       child: Container(
         height: 70,
         width: double.infinity,

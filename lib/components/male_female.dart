@@ -1,6 +1,7 @@
-import 'package:bmi/utils/app_colors.dart';
-import 'package:bmi/utils/text_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/app_colors.dart';
+import '../utils/text_styles.dart';
 
 class MaleFemale extends StatelessWidget {
   const MaleFemale({
