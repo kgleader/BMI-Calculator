@@ -15,7 +15,7 @@ class AppTextStyle {
   );
 
   static const TextStyle valueStyle = TextStyle(
-    fontSize: 65,
+    fontSize: 50,
     color: AppColor.whiteText,
     fontWeight: FontWeight.w700,
   );

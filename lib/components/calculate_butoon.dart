@@ -14,7 +14,7 @@ class CalculateButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 70,
+        height: 60,
         width: double.infinity,
         color: AppColor.buttonColor,
         child: const Center(

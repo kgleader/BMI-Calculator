@@ -35,7 +35,7 @@ class _HomeViewState extends State<HomeView> {
         title: const Text(AppText.appBarTitle, style: AppTextStyle.titleStyle),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Expanded(
@@ -55,7 +55,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 10),
                   StatusCard(
                     child: InkWell(
                       onTap: () {
@@ -73,7 +73,7 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             StatusCard(
               child: Heith(
                 height: heigth,
@@ -84,7 +84,7 @@ class _HomeViewState extends State<HomeView> {
                 },
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Expanded(
               child: Row(
                 children: [
@@ -104,7 +104,7 @@ class _HomeViewState extends State<HomeView> {
                       },
                     ),
                   ),
-                  const SizedBox(width: 20),
+                  const SizedBox(width: 10),
                   StatusCard(
                     child: WeigthAge(
                       text: AppText.age,
